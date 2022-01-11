@@ -18,6 +18,7 @@ BuildRequires : buildreq-distutils3
 BuildRequires : setuptools
 Patch1: avx2.patch
 
+Provides: setuptools
 %description
 .. image:: https://raw.githubusercontent.com/pypa/setuptools/main/docs/images/banner-640x320.svg
 :align: center
