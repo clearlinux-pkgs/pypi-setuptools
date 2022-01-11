@@ -4,7 +4,7 @@
 #
 Name     : pypi-setuptools
 Version  : 60.5.0
-Release  : 249
+Release  : 250
 URL      : https://files.pythonhosted.org/packages/69/77/aee1ecacea4d0db740046ce1785e81d16c4b1755af50eceac4ca1a1f8bfd/setuptools-60.5.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/69/77/aee1ecacea4d0db740046ce1785e81d16c4b1755af50eceac4ca1a1f8bfd/setuptools-60.5.0.tar.gz
 Summary  : Easily download, build, install, upgrade, and uninstall Python packages
@@ -15,7 +15,6 @@ Requires: pypi-setuptools-license = %{version}-%{release}
 Requires: pypi-setuptools-python = %{version}-%{release}
 Requires: pypi-setuptools-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-BuildRequires : pypi-setuptools
 Patch1: avx2.patch
 
 %description
@@ -68,7 +67,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641942822
+export SOURCE_DATE_EPOCH=1641942889
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
