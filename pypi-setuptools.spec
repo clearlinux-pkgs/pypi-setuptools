@@ -4,7 +4,7 @@
 #
 Name     : pypi-setuptools
 Version  : 65.5.0
-Release  : 279
+Release  : 280
 URL      : https://files.pythonhosted.org/packages/c5/41/247814d8b7a044717164c74080725a6c8f3d2b5fc82b34bd825b617df663/setuptools-65.5.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/c5/41/247814d8b7a044717164c74080725a6c8f3d2b5fc82b34bd825b617df663/setuptools-65.5.0.tar.gz
 Summary  : Easily download, build, install, upgrade, and uninstall Python packages
