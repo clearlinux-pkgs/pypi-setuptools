@@ -4,10 +4,10 @@
 # Using build pattern: distutils3
 #
 Name     : pypi-setuptools
-Version  : 68.2.1
-Release  : 307
-URL      : https://files.pythonhosted.org/packages/e9/37/c6a6eb1ebeea919e4f394d811f234322d8a99eb58d5ee0f6089dbf06c488/setuptools-68.2.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/e9/37/c6a6eb1ebeea919e4f394d811f234322d8a99eb58d5ee0f6089dbf06c488/setuptools-68.2.1.tar.gz
+Version  : 68.2.2
+Release  : 308
+URL      : https://files.pythonhosted.org/packages/ef/cc/93f7213b2ab5ed383f98ce8020e632ef256b406b8569606c3f160ed8e1c9/setuptools-68.2.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/ef/cc/93f7213b2ab5ed383f98ce8020e632ef256b406b8569606c3f160ed8e1c9/setuptools-68.2.2.tar.gz
 Summary  : Easily download, build, install, upgrade, and uninstall Python packages
 Group    : Development/Tools
 License  : MIT Python-2.0 ZPL-2.0
@@ -61,10 +61,10 @@ python3 components for the pypi-setuptools package.
 
 
 %prep
-%setup -q -n setuptools-68.2.1
-cd %{_builddir}/setuptools-68.2.1
+%setup -q -n setuptools-68.2.2
+cd %{_builddir}/setuptools-68.2.2
 pushd ..
-cp -a setuptools-68.2.1 buildavx2
+cp -a setuptools-68.2.2 buildavx2
 popd
 
 %build
@@ -72,7 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1694468982
+export SOURCE_DATE_EPOCH=1694622771
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
