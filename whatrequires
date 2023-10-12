@@ -1,3 +1,4 @@
 # This file contains recursive sources that require this package
 mozjs102
+mozjs115
 mozjs91
