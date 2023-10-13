@@ -5,7 +5,7 @@
 #
 Name     : pypi-setuptools
 Version  : 68.2.2
-Release  : 311
+Release  : 312
 URL      : https://files.pythonhosted.org/packages/ef/cc/93f7213b2ab5ed383f98ce8020e632ef256b406b8569606c3f160ed8e1c9/setuptools-68.2.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/ef/cc/93f7213b2ab5ed383f98ce8020e632ef256b406b8569606c3f160ed8e1c9/setuptools-68.2.2.tar.gz
 Summary  : Easily download, build, install, upgrade, and uninstall Python packages
