@@ -7,7 +7,7 @@
 #
 Name     : pypi-setuptools
 Version  : 69.0.3
-Release  : 315
+Release  : 316
 URL      : https://files.pythonhosted.org/packages/fc/c9/b146ca195403e0182a374e0ea4dbc69136bad3cd55bc293df496d625d0f7/setuptools-69.0.3.tar.gz
 Source0  : https://files.pythonhosted.org/packages/fc/c9/b146ca195403e0182a374e0ea4dbc69136bad3cd55bc293df496d625d0f7/setuptools-69.0.3.tar.gz
 Summary  : Easily download, build, install, upgrade, and uninstall Python packages
