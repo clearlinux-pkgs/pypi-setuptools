@@ -6,10 +6,10 @@
 # autospec commit: 5905be9
 #
 Name     : pypi-setuptools
-Version  : 69.5.1
-Release  : 322
-URL      : https://files.pythonhosted.org/packages/d6/4f/b10f707e14ef7de524fe1f8988a294fb262a29c9b5b12275c7e188864aed/setuptools-69.5.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/d6/4f/b10f707e14ef7de524fe1f8988a294fb262a29c9b5b12275c7e188864aed/setuptools-69.5.1.tar.gz
+Version  : 70.0.0
+Release  : 323
+URL      : https://files.pythonhosted.org/packages/aa/60/5db2249526c9b453c5bb8b9f6965fcab0ddb7f40ad734420b3b421f7da44/setuptools-70.0.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/aa/60/5db2249526c9b453c5bb8b9f6965fcab0ddb7f40ad734420b3b421f7da44/setuptools-70.0.0.tar.gz
 Summary  : Easily download, build, install, upgrade, and uninstall Python packages
 Group    : Development/Tools
 License  : MIT Python-2.0 ZPL-2.0
@@ -23,7 +23,7 @@ BuildRequires : buildreq-distutils3
 %define debug_package %{nil}
 
 %description
-.. image:: https://img.shields.io/pypi/v/setuptools.svg
+.. |pypi-version| image:: https://img.shields.io/pypi/v/setuptools.svg
 :target: https://pypi.org/project/setuptools
 
 %package bin
@@ -63,10 +63,10 @@ python3 components for the pypi-setuptools package.
 
 
 %prep
-%setup -q -n setuptools-69.5.1
-cd %{_builddir}/setuptools-69.5.1
+%setup -q -n setuptools-70.0.0
+cd %{_builddir}/setuptools-70.0.0
 pushd ..
-cp -a setuptools-69.5.1 buildavx2
+cp -a setuptools-70.0.0 buildavx2
 popd
 
 %build
@@ -74,7 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1713132052
+export SOURCE_DATE_EPOCH=1716297230
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
