@@ -6,13 +6,13 @@
 # autospec commit: 9f33e63
 #
 Name     : pypi-setuptools
-Version  : 71.0.0
-Release  : 328
-URL      : https://files.pythonhosted.org/packages/32/37/8751819aebb61ff15cc438e9d80d7b32d6cef4f266a1145a7037cbbfd693/setuptools-71.0.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/32/37/8751819aebb61ff15cc438e9d80d7b32d6cef4f266a1145a7037cbbfd693/setuptools-71.0.0.tar.gz
+Version  : 71.0.2
+Release  : 329
+URL      : https://files.pythonhosted.org/packages/0e/ae/4a643fdc3b2fe390a6accd55117d5c5af9fbe5da7d2d300c8dd52aa35555/setuptools-71.0.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/0e/ae/4a643fdc3b2fe390a6accd55117d5c5af9fbe5da7d2d300c8dd52aa35555/setuptools-71.0.2.tar.gz
 Summary  : Easily download, build, install, upgrade, and uninstall Python packages
 Group    : Development/Tools
-License  : MIT Python-2.0 ZPL-2.0
+License  : Apache-2.0 BSD-2-Clause MIT Python-2.0 ZPL-2.0
 Requires: pypi-setuptools-bin = %{version}-%{release}
 Requires: pypi-setuptools-license = %{version}-%{release}
 Requires: pypi-setuptools-python = %{version}-%{release}
@@ -63,10 +63,10 @@ python3 components for the pypi-setuptools package.
 
 
 %prep
-%setup -q -n setuptools-71.0.0
-cd %{_builddir}/setuptools-71.0.0
+%setup -q -n setuptools-71.0.2
+cd %{_builddir}/setuptools-71.0.2
 pushd ..
-cp -a setuptools-71.0.0 buildavx2
+cp -a setuptools-71.0.2 buildavx2
 popd
 
 %build
@@ -74,7 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1721318652
+export SOURCE_DATE_EPOCH=1721329943
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -120,7 +120,22 @@ export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-setuptools
 cp %{_builddir}/setuptools-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
+cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/backports.tarfile-1.2.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
+cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/importlib_metadata-8.0.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/2b8b815229aa8a61e483fb4ba0588b8b6c491890 || :
+cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/importlib_resources-6.4.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/2b8b815229aa8a61e483fb4ba0588b8b6c491890 || :
+cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/inflect-7.3.1.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
+cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/jaraco.context-5.3.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
+cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/jaraco.functools-4.0.1.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
+cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/jaraco.text-3.12.1.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
+cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/more_itertools-10.3.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0d43a836dac65c0ea426ad49c881a1086600bf85 || :
+cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/packaging-24.1.dist-info/LICENSE.APACHE %{buildroot}/usr/share/package-licenses/pypi-setuptools/598f87f072f66e2269dd6919292b2934dbb20492 || :
+cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/packaging-24.1.dist-info/LICENSE.BSD %{buildroot}/usr/share/package-licenses/pypi-setuptools/fdc0e4eabc45522b079deff7d03d70528d775dc0 || :
+cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/platformdirs-4.2.2.dist-info/licenses/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/f511a8a63af8c6e36004b593478436bbc560ee0c || :
+cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/tomli-2.0.1.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/9da6ca26337a886fb3e8d30efd4aeda623dc9ade || :
+cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/typeguard-4.3.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/a51ccdcb7a9d8c2116d1dfc16f11b3c8a5830f67 || :
+cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/typing_extensions-4.12.2.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/c6e195f9aa30cc9b675d1612ca4fb7f74111bd35 || :
 cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/wheel-0.43.0.dist-info/LICENSE.txt %{buildroot}/usr/share/package-licenses/pypi-setuptools/5b39c45a91a556e5f1599604f1799e4027fa0e60 || :
+cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/zipp-3.19.2.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
 python3 -m installer --destdir=%{buildroot} dist/*.whl
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -133,6 +148,24 @@ FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS -march=x86-64-v3 "
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS -march=x86-64-v3 "
 python3 -m installer --destdir=%{buildroot}-v3 dist/*.whl
 popd
+## Remove excluded files
+rm -f %{buildroot}*/usr/lib/python3.12/site-packages/setuptools/_distutils/command/wininst-10.0-amd64.exe
+rm -f %{buildroot}*/usr/lib/python3.12/site-packages/setuptools/_distutils/command/wininst-10.0.exe
+rm -f %{buildroot}*/usr/lib/python3.12/site-packages/setuptools/_distutils/command/wininst-14.0-amd64.exe
+rm -f %{buildroot}*/usr/lib/python3.12/site-packages/setuptools/_distutils/command/wininst-14.0.exe
+rm -f %{buildroot}*/usr/lib/python3.12/site-packages/setuptools/_distutils/command/wininst-6.0.exe
+rm -f %{buildroot}*/usr/lib/python3.12/site-packages/setuptools/_distutils/command/wininst-7.1.exe
+rm -f %{buildroot}*/usr/lib/python3.12/site-packages/setuptools/_distutils/command/wininst-8.0.exe
+rm -f %{buildroot}*/usr/lib/python3.12/site-packages/setuptools/_distutils/command/wininst-9.0-amd64.exe
+rm -f %{buildroot}*/usr/lib/python3.12/site-packages/setuptools/_distutils/command/wininst-9.0.exe
+rm -f %{buildroot}*/usr/lib/python3.12/site-packages/setuptools/cli-32.exe
+rm -f %{buildroot}*/usr/lib/python3.12/site-packages/setuptools/cli-64.exe
+rm -f %{buildroot}*/usr/lib/python3.12/site-packages/setuptools/cli-arm64.exe
+rm -f %{buildroot}*/usr/lib/python3.12/site-packages/setuptools/cli.exe
+rm -f %{buildroot}*/usr/lib/python3.12/site-packages/setuptools/gui-32.exe
+rm -f %{buildroot}*/usr/lib/python3.12/site-packages/setuptools/gui-64.exe
+rm -f %{buildroot}*/usr/lib/python3.12/site-packages/setuptools/gui-arm64.exe
+rm -f %{buildroot}*/usr/lib/python3.12/site-packages/setuptools/gui.exe
 ## install_append content
 mkdir -p %{buildroot}/usr/bin
 echo "#!/bin/sh" > %{buildroot}/usr/bin/easy_install_is_deprecated
@@ -150,7 +183,15 @@ chmod 755 %{buildroot}/usr/bin/easy_install_is_deprecated
 %files license
 %defattr(0644,root,root,0755)
 /usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12
+/usr/share/package-licenses/pypi-setuptools/0d43a836dac65c0ea426ad49c881a1086600bf85
+/usr/share/package-licenses/pypi-setuptools/2b8b815229aa8a61e483fb4ba0588b8b6c491890
+/usr/share/package-licenses/pypi-setuptools/598f87f072f66e2269dd6919292b2934dbb20492
 /usr/share/package-licenses/pypi-setuptools/5b39c45a91a556e5f1599604f1799e4027fa0e60
+/usr/share/package-licenses/pypi-setuptools/9da6ca26337a886fb3e8d30efd4aeda623dc9ade
+/usr/share/package-licenses/pypi-setuptools/a51ccdcb7a9d8c2116d1dfc16f11b3c8a5830f67
+/usr/share/package-licenses/pypi-setuptools/c6e195f9aa30cc9b675d1612ca4fb7f74111bd35
+/usr/share/package-licenses/pypi-setuptools/f511a8a63af8c6e36004b593478436bbc560ee0c
+/usr/share/package-licenses/pypi-setuptools/fdc0e4eabc45522b079deff7d03d70528d775dc0
 
 %files python
 %defattr(-,root,root,-)
