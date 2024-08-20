@@ -6,13 +6,13 @@
 # autospec commit: f35655a
 #
 Name     : pypi-setuptools
-Version  : 72.2.0
-Release  : 333
-URL      : https://files.pythonhosted.org/packages/ce/ef/013ded5b0d259f3fa636bf35de186f0061c09fbe124020ce6b8db68c83af/setuptools-72.2.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/ce/ef/013ded5b0d259f3fa636bf35de186f0061c09fbe124020ce6b8db68c83af/setuptools-72.2.0.tar.gz
+Version  : 73.0.0
+Release  : 334
+URL      : https://files.pythonhosted.org/packages/98/0b/56dabcf2b37d9152090bcd5d42e28ad312c9ba54fb1446b22dcc809dd84a/setuptools-73.0.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/98/0b/56dabcf2b37d9152090bcd5d42e28ad312c9ba54fb1446b22dcc809dd84a/setuptools-73.0.0.tar.gz
 Summary  : Easily download, build, install, upgrade, and uninstall Python packages
 Group    : Development/Tools
-License  : Apache-2.0 BSD-2-Clause MIT Python-2.0 ZPL-2.0
+License  : Apache-2.0 BSD-2-Clause BSD-3-Clause ISC MIT MPL-2.0 Python-2.0 Unlicense ZPL-2.0
 Requires: pypi-setuptools-bin = %{version}-%{release}
 Requires: pypi-setuptools-license = %{version}-%{release}
 Requires: pypi-setuptools-python = %{version}-%{release}
@@ -63,10 +63,10 @@ python3 components for the pypi-setuptools package.
 
 
 %prep
-%setup -q -n setuptools-72.2.0
-cd %{_builddir}/setuptools-72.2.0
+%setup -q -n setuptools-73.0.0
+cd %{_builddir}/setuptools-73.0.0
 pushd ..
-cp -a setuptools-72.2.0 buildavx2
+cp -a setuptools-73.0.0 buildavx2
 popd
 
 %build
@@ -74,7 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1723569697
+export SOURCE_DATE_EPOCH=1724164910
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -119,7 +119,90 @@ LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-setuptools
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/MarkupSafe-2.1.5.dist-info/LICENSE.rst %{buildroot}/usr/share/package-licenses/pypi-setuptools/e32a549b135c4b2b268107adc12d13cca2ca1e8c || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/PyNaCl-1.5.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/43a3a49bd7af636c923a5ae475395b8e29320529 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/SecretStorage-3.3.3.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/b23eb98a71ae4e71270872be9d167f785ad043d1 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/alabaster-1.0.0.dist-info/LICENSE.rst %{buildroot}/usr/share/package-licenses/pypi-setuptools/ef0bbb4479d44765f2402160812f3f860befe8f8 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/babel-2.16.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/9da3d392c070bd444643839957cecfd15e5c4501 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/build-1.2.1.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/4339a5c41946d5ce6e23a8b8c4fff00d838d40c9 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/certifi-2024.7.4.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/3b4d48f29780c79b4484b1b3979544766b626fdb || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/cffi-1.17.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/65e8b9015ffb0747c23370a3d3af2a796c64780e || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/charset_normalizer-3.3.2.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/753eb879a99db2b65e384b3c1baec552b6134f26 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/click-8.1.7.dist-info/LICENSE.rst %{buildroot}/usr/share/package-licenses/pypi-setuptools/6fb11e02ffe0f79b74f1c6034b4ae6e7717a69f8 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/cryptography-43.0.0.dist-info/license_files/LICENSE.APACHE %{buildroot}/usr/share/package-licenses/pypi-setuptools/de33ead2bee64352544ce0aa9e410c0c44fdf7d9 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/cryptography-43.0.0.dist-info/license_files/LICENSE.BSD %{buildroot}/usr/share/package-licenses/pypi-setuptools/ea5b412c09f3b29ba1d81a61b878c5c16ffe69d8 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/distlib-0.3.8.dist-info/LICENSE.txt %{buildroot}/usr/share/package-licenses/pypi-setuptools/79c85e153df486fd6c05a2f7359e1ff6dc288867 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/filelock-3.15.4.dist-info/licenses/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/24944bf7920108f5a4790e6071c32e9102760c37 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/idna-3.7.dist-info/LICENSE.md %{buildroot}/usr/share/package-licenses/pypi-setuptools/97e2c8c10633ca4a49876343c652e92e7515c36f || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/imagesize-1.4.1.dist-info/LICENSE.rst %{buildroot}/usr/share/package-licenses/pypi-setuptools/e2d81b7a944986d62b6fed34a9aa38877eba7a7e || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/importlib_metadata-8.3.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/2b8b815229aa8a61e483fb4ba0588b8b6c491890 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/ini2toml-0.15.dist-info/LICENSE.txt %{buildroot}/usr/share/package-licenses/pypi-setuptools/4fa8d983d44984c7a1d7bbca6971242b10155776 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/jaraco.classes-3.4.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/jaraco.context-5.3.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/jaraco.develop-8.15.1.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/jaraco.functools-4.0.2.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/jaraco.packaging-10.2.2.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/jaraco.path-3.7.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/jaraco.text-4.0.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/jaraco.ui-2.4.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/jaraco.vcs-2.4.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/jaraco.versioning-1.1.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/jeepney-0.8.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/b2f7e71b77f14f21cd693e1c6fbe7236a8deac5f || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/jinja2-3.1.4.dist-info/LICENSE.txt %{buildroot}/usr/share/package-licenses/pypi-setuptools/c4dbdbc12926d4d52c9156e690640f372615c234 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/keyring-25.3.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/markdown_it_py-3.0.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/ab5a711cce75e49bdbd08bbcb728262e30580e5d || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/markdown_it_py-3.0.0.dist-info/LICENSE.markdown-it %{buildroot}/usr/share/package-licenses/pypi-setuptools/5ff31979b5da51a43fc76f781675a8f86aed52f2 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/mdurl-0.1.2.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/b87bd47e069fa27d2243d1638d435a9d5081ccff || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/more_itertools-10.4.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0d43a836dac65c0ea426ad49c881a1086600bf85 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/natsort-8.4.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0c7a5145bb5a04addb5503d441f6e6a05e44e47c || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/packaging-24.1.dist-info/LICENSE.APACHE %{buildroot}/usr/share/package-licenses/pypi-setuptools/598f87f072f66e2269dd6919292b2934dbb20492 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/packaging-24.1.dist-info/LICENSE.BSD %{buildroot}/usr/share/package-licenses/pypi-setuptools/fdc0e4eabc45522b079deff7d03d70528d775dc0 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/path-17.0.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/pip-24.1.dist-info/LICENSE.txt %{buildroot}/usr/share/package-licenses/pypi-setuptools/d1816736d55c943e1ed44a003f72cb7d1afe0789 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/pkginfo-1.10.0.dist-info/LICENSE.txt %{buildroot}/usr/share/package-licenses/pypi-setuptools/03162d5b27cb1ca3f768d50b3ea24877f6543dbd || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/platformdirs-4.2.2.dist-info/licenses/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/f511a8a63af8c6e36004b593478436bbc560ee0c || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/pycparser-2.22.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/b3c1dabbd5f289a4be4a10e822857a0ae3927598 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/pygments-2.18.0.dist-info/licenses/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0c271aeb0199762f47e124c8960b830ad5a97ce0 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/pyproject_hooks-1.0.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/b2f7e71b77f14f21cd693e1c6fbe7236a8deac5f || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/python_dateutil-2.9.0.post0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/f3b34c666d9f93071f6dbeeea6f8daefc2258e90 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/readme_renderer-44.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/43a3a49bd7af636c923a5ae475395b8e29320529 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/requests-2.32.3.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/57aed0b0f74e63f6b85cce11bce29ba1710b422b || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/requests_file-2.1.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/6ece8941471a5843511a796d798cbb6ac05be6f7 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/rfc3986-2.0.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/731674b4b036fc2010f7f85b1c3160be4d298d48 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/rich-13.7.1.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/aa95e7e0dbe72bae99f41dc862f0516da8ae35c2 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/setuptools-72.2.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/setuptools/_vendor/backports.tarfile-1.2.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/setuptools/_vendor/importlib_metadata-8.0.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/2b8b815229aa8a61e483fb4ba0588b8b6c491890 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/setuptools/_vendor/importlib_resources-6.4.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/2b8b815229aa8a61e483fb4ba0588b8b6c491890 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/setuptools/_vendor/inflect-7.3.1.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/setuptools/_vendor/jaraco.context-5.3.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/setuptools/_vendor/jaraco.functools-4.0.1.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/setuptools/_vendor/jaraco.text-3.12.1.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/setuptools/_vendor/more_itertools-10.3.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0d43a836dac65c0ea426ad49c881a1086600bf85 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/setuptools/_vendor/packaging-24.1.dist-info/LICENSE.APACHE %{buildroot}/usr/share/package-licenses/pypi-setuptools/598f87f072f66e2269dd6919292b2934dbb20492 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/setuptools/_vendor/packaging-24.1.dist-info/LICENSE.BSD %{buildroot}/usr/share/package-licenses/pypi-setuptools/fdc0e4eabc45522b079deff7d03d70528d775dc0 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/setuptools/_vendor/platformdirs-4.2.2.dist-info/licenses/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/f511a8a63af8c6e36004b593478436bbc560ee0c || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/setuptools/_vendor/tomli-2.0.1.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/9da6ca26337a886fb3e8d30efd4aeda623dc9ade || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/setuptools/_vendor/typeguard-4.3.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/a51ccdcb7a9d8c2116d1dfc16f11b3c8a5830f67 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/setuptools/_vendor/typing_extensions-4.12.2.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/c6e195f9aa30cc9b675d1612ca4fb7f74111bd35 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/setuptools/_vendor/wheel-0.43.0.dist-info/LICENSE.txt %{buildroot}/usr/share/package-licenses/pypi-setuptools/5b39c45a91a556e5f1599604f1799e4027fa0e60 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/setuptools/_vendor/zipp-3.19.2.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/shellingham-1.5.4.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/e8f006df7200afbbdd3a2e7a85e487338dc75073 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/six-1.16.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/ac6ba16d8833b691bbbda7c8eb0c06891c78f98f || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/snowballstemmer-2.2.0.dist-info/COPYING %{buildroot}/usr/share/package-licenses/pypi-setuptools/f8d2c0ec1880e550ce455b2c660493b9d81f496d || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/sphinxcontrib_jsmath-1.0.1.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/95a954a1c89e9eb976234b1909028a4bdb8e9e28 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/subprocess_tee-0.4.2.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/3a8ca1ab43f7ee0b351aca14b5b2cda5ec3406e5 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/tempora-5.7.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/tomlkit-0.13.2.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/84661790a5df00ab944c2d37978d6ce5ac88e554 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/twine-5.1.1.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/7f6eb21389a5af4de0e7927a25fe236bc0cd3a75 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/typing_extensions-4.12.2.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/c6e195f9aa30cc9b675d1612ca4fb7f74111bd35 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/urllib3-2.2.2.dist-info/licenses/LICENSE.txt %{buildroot}/usr/share/package-licenses/pypi-setuptools/86e713a60a618065f28eebdc1228b9438180b2f8 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/urllib3-2.2.2.dist-info/licenses/LICENSE.txt %{buildroot}/usr/share/package-licenses/pypi-setuptools/86e713a60a618065f28eebdc1228b9438180b2f8 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/virtualenv-20.26.3.dist-info/licenses/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/bcaf1877d014a17d06f0e23264c6429acf921d01 || :
+cp %{_builddir}/setuptools-%{version}/.tox/release/lib/python3.12/site-packages/zipp-3.20.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
 cp %{_builddir}/setuptools-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
+cp %{_builddir}/setuptools-%{version}/setuptools/_distutils/_vendor/packaging-24.0.dist-info/LICENSE.APACHE %{buildroot}/usr/share/package-licenses/pypi-setuptools/598f87f072f66e2269dd6919292b2934dbb20492 || :
+cp %{_builddir}/setuptools-%{version}/setuptools/_distutils/_vendor/packaging-24.0.dist-info/LICENSE.BSD %{buildroot}/usr/share/package-licenses/pypi-setuptools/fdc0e4eabc45522b079deff7d03d70528d775dc0 || :
 cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/backports.tarfile-1.2.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
 cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/importlib_metadata-8.0.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/2b8b815229aa8a61e483fb4ba0588b8b6c491890 || :
 cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/importlib_resources-6.4.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/2b8b815229aa8a61e483fb4ba0588b8b6c491890 || :
@@ -182,15 +265,56 @@ chmod 755 %{buildroot}/usr/bin/easy_install_is_deprecated
 
 %files license
 %defattr(0644,root,root,0755)
+/usr/share/package-licenses/pypi-setuptools/03162d5b27cb1ca3f768d50b3ea24877f6543dbd
 /usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12
+/usr/share/package-licenses/pypi-setuptools/0c271aeb0199762f47e124c8960b830ad5a97ce0
+/usr/share/package-licenses/pypi-setuptools/0c7a5145bb5a04addb5503d441f6e6a05e44e47c
 /usr/share/package-licenses/pypi-setuptools/0d43a836dac65c0ea426ad49c881a1086600bf85
+/usr/share/package-licenses/pypi-setuptools/24944bf7920108f5a4790e6071c32e9102760c37
 /usr/share/package-licenses/pypi-setuptools/2b8b815229aa8a61e483fb4ba0588b8b6c491890
+/usr/share/package-licenses/pypi-setuptools/3a8ca1ab43f7ee0b351aca14b5b2cda5ec3406e5
+/usr/share/package-licenses/pypi-setuptools/3b4d48f29780c79b4484b1b3979544766b626fdb
+/usr/share/package-licenses/pypi-setuptools/4339a5c41946d5ce6e23a8b8c4fff00d838d40c9
+/usr/share/package-licenses/pypi-setuptools/43a3a49bd7af636c923a5ae475395b8e29320529
+/usr/share/package-licenses/pypi-setuptools/4fa8d983d44984c7a1d7bbca6971242b10155776
+/usr/share/package-licenses/pypi-setuptools/57aed0b0f74e63f6b85cce11bce29ba1710b422b
 /usr/share/package-licenses/pypi-setuptools/598f87f072f66e2269dd6919292b2934dbb20492
 /usr/share/package-licenses/pypi-setuptools/5b39c45a91a556e5f1599604f1799e4027fa0e60
+/usr/share/package-licenses/pypi-setuptools/5ff31979b5da51a43fc76f781675a8f86aed52f2
+/usr/share/package-licenses/pypi-setuptools/65e8b9015ffb0747c23370a3d3af2a796c64780e
+/usr/share/package-licenses/pypi-setuptools/6ece8941471a5843511a796d798cbb6ac05be6f7
+/usr/share/package-licenses/pypi-setuptools/6fb11e02ffe0f79b74f1c6034b4ae6e7717a69f8
+/usr/share/package-licenses/pypi-setuptools/731674b4b036fc2010f7f85b1c3160be4d298d48
+/usr/share/package-licenses/pypi-setuptools/753eb879a99db2b65e384b3c1baec552b6134f26
+/usr/share/package-licenses/pypi-setuptools/79c85e153df486fd6c05a2f7359e1ff6dc288867
+/usr/share/package-licenses/pypi-setuptools/7f6eb21389a5af4de0e7927a25fe236bc0cd3a75
+/usr/share/package-licenses/pypi-setuptools/84661790a5df00ab944c2d37978d6ce5ac88e554
+/usr/share/package-licenses/pypi-setuptools/86e713a60a618065f28eebdc1228b9438180b2f8
+/usr/share/package-licenses/pypi-setuptools/95a954a1c89e9eb976234b1909028a4bdb8e9e28
+/usr/share/package-licenses/pypi-setuptools/97e2c8c10633ca4a49876343c652e92e7515c36f
+/usr/share/package-licenses/pypi-setuptools/9da3d392c070bd444643839957cecfd15e5c4501
 /usr/share/package-licenses/pypi-setuptools/9da6ca26337a886fb3e8d30efd4aeda623dc9ade
 /usr/share/package-licenses/pypi-setuptools/a51ccdcb7a9d8c2116d1dfc16f11b3c8a5830f67
+/usr/share/package-licenses/pypi-setuptools/aa95e7e0dbe72bae99f41dc862f0516da8ae35c2
+/usr/share/package-licenses/pypi-setuptools/ab5a711cce75e49bdbd08bbcb728262e30580e5d
+/usr/share/package-licenses/pypi-setuptools/ac6ba16d8833b691bbbda7c8eb0c06891c78f98f
+/usr/share/package-licenses/pypi-setuptools/b23eb98a71ae4e71270872be9d167f785ad043d1
+/usr/share/package-licenses/pypi-setuptools/b2f7e71b77f14f21cd693e1c6fbe7236a8deac5f
+/usr/share/package-licenses/pypi-setuptools/b3c1dabbd5f289a4be4a10e822857a0ae3927598
+/usr/share/package-licenses/pypi-setuptools/b87bd47e069fa27d2243d1638d435a9d5081ccff
+/usr/share/package-licenses/pypi-setuptools/bcaf1877d014a17d06f0e23264c6429acf921d01
+/usr/share/package-licenses/pypi-setuptools/c4dbdbc12926d4d52c9156e690640f372615c234
 /usr/share/package-licenses/pypi-setuptools/c6e195f9aa30cc9b675d1612ca4fb7f74111bd35
+/usr/share/package-licenses/pypi-setuptools/d1816736d55c943e1ed44a003f72cb7d1afe0789
+/usr/share/package-licenses/pypi-setuptools/de33ead2bee64352544ce0aa9e410c0c44fdf7d9
+/usr/share/package-licenses/pypi-setuptools/e2d81b7a944986d62b6fed34a9aa38877eba7a7e
+/usr/share/package-licenses/pypi-setuptools/e32a549b135c4b2b268107adc12d13cca2ca1e8c
+/usr/share/package-licenses/pypi-setuptools/e8f006df7200afbbdd3a2e7a85e487338dc75073
+/usr/share/package-licenses/pypi-setuptools/ea5b412c09f3b29ba1d81a61b878c5c16ffe69d8
+/usr/share/package-licenses/pypi-setuptools/ef0bbb4479d44765f2402160812f3f860befe8f8
+/usr/share/package-licenses/pypi-setuptools/f3b34c666d9f93071f6dbeeea6f8daefc2258e90
 /usr/share/package-licenses/pypi-setuptools/f511a8a63af8c6e36004b593478436bbc560ee0c
+/usr/share/package-licenses/pypi-setuptools/f8d2c0ec1880e550ce455b2c660493b9d81f496d
 /usr/share/package-licenses/pypi-setuptools/fdc0e4eabc45522b079deff7d03d70528d775dc0
 
 %files python

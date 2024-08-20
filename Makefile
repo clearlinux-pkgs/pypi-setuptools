@@ -1,5 +1,5 @@
 PKG_NAME := pypi-setuptools
-URL = https://files.pythonhosted.org/packages/ce/ef/013ded5b0d259f3fa636bf35de186f0061c09fbe124020ce6b8db68c83af/setuptools-72.2.0.tar.gz
+URL = https://files.pythonhosted.org/packages/98/0b/56dabcf2b37d9152090bcd5d42e28ad312c9ba54fb1446b22dcc809dd84a/setuptools-73.0.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
