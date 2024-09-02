@@ -6,10 +6,10 @@
 # autospec commit: f35655a
 #
 Name     : pypi-setuptools
-Version  : 74.0.0
-Release  : 336
-URL      : https://files.pythonhosted.org/packages/6a/21/8fd457d5a979109603e0e460c73177c3a9b6b7abcd136d0146156da95895/setuptools-74.0.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/6a/21/8fd457d5a979109603e0e460c73177c3a9b6b7abcd136d0146156da95895/setuptools-74.0.0.tar.gz
+Version  : 74.1.0
+Release  : 337
+URL      : https://files.pythonhosted.org/packages/ac/11/0a953274017ca5c33a9831bc5e052e825d174a3551bd18924777794c8162/setuptools-74.1.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/ac/11/0a953274017ca5c33a9831bc5e052e825d174a3551bd18924777794c8162/setuptools-74.1.0.tar.gz
 Summary  : Easily download, build, install, upgrade, and uninstall Python packages
 Group    : Development/Tools
 License  : Apache-2.0 BSD-2-Clause BSD-3-Clause MIT Python-2.0 ZPL-2.0
@@ -63,10 +63,10 @@ python3 components for the pypi-setuptools package.
 
 
 %prep
-%setup -q -n setuptools-74.0.0
-cd %{_builddir}/setuptools-74.0.0
+%setup -q -n setuptools-74.1.0
+cd %{_builddir}/setuptools-74.1.0
 pushd ..
-cp -a setuptools-74.0.0 buildavx2
+cp -a setuptools-74.1.0 buildavx2
 popd
 
 %build
@@ -74,7 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1724797020
+export SOURCE_DATE_EPOCH=1725307037
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -120,8 +120,6 @@ export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-setuptools
 cp %{_builddir}/setuptools-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
-cp %{_builddir}/setuptools-%{version}/setuptools/_distutils/_vendor/packaging-24.0.dist-info/LICENSE.APACHE %{buildroot}/usr/share/package-licenses/pypi-setuptools/598f87f072f66e2269dd6919292b2934dbb20492 || :
-cp %{_builddir}/setuptools-%{version}/setuptools/_distutils/_vendor/packaging-24.0.dist-info/LICENSE.BSD %{buildroot}/usr/share/package-licenses/pypi-setuptools/fdc0e4eabc45522b079deff7d03d70528d775dc0 || :
 cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/backports.tarfile-1.2.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
 cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/importlib_metadata-8.0.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/2b8b815229aa8a61e483fb4ba0588b8b6c491890 || :
 cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/importlib_resources-6.4.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/2b8b815229aa8a61e483fb4ba0588b8b6c491890 || :
