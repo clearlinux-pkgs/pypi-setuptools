@@ -4,3 +4,4 @@ tests-python
 tests.test_markers-python
 tests.test_pkg_resources-python
 tests.test_resources-python
+pypi(setuptools.command.upload_docs)
