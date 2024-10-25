@@ -7,7 +7,7 @@
 #
 Name     : pypi-setuptools
 Version  : 75.2.0
-Release  : 341
+Release  : 342
 URL      : https://files.pythonhosted.org/packages/07/37/b31be7e4b9f13b59cde9dcaeff112d401d49e0dc5b37ed4a9fc8fb12f409/setuptools-75.2.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/07/37/b31be7e4b9f13b59cde9dcaeff112d401d49e0dc5b37ed4a9fc8fb12f409/setuptools-75.2.0.tar.gz
 Summary  : Easily download, build, install, upgrade, and uninstall Python packages
