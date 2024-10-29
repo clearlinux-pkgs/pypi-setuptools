@@ -6,10 +6,10 @@
 # autospec commit: f35655a
 #
 Name     : pypi-setuptools
-Version  : 75.2.0
-Release  : 342
-URL      : https://files.pythonhosted.org/packages/07/37/b31be7e4b9f13b59cde9dcaeff112d401d49e0dc5b37ed4a9fc8fb12f409/setuptools-75.2.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/07/37/b31be7e4b9f13b59cde9dcaeff112d401d49e0dc5b37ed4a9fc8fb12f409/setuptools-75.2.0.tar.gz
+Version  : 75.3.0
+Release  : 343
+URL      : https://files.pythonhosted.org/packages/ed/22/a438e0caa4576f8c383fa4d35f1cc01655a46c75be358960d815bfbb12bd/setuptools-75.3.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/ed/22/a438e0caa4576f8c383fa4d35f1cc01655a46c75be358960d815bfbb12bd/setuptools-75.3.0.tar.gz
 Summary  : Easily download, build, install, upgrade, and uninstall Python packages
 Group    : Development/Tools
 License  : Apache-2.0 BSD-2-Clause BSD-3-Clause MIT Python-2.0 ZPL-2.0
@@ -63,10 +63,10 @@ python3 components for the pypi-setuptools package.
 
 
 %prep
-%setup -q -n setuptools-75.2.0
-cd %{_builddir}/setuptools-75.2.0
+%setup -q -n setuptools-75.3.0
+cd %{_builddir}/setuptools-75.3.0
 pushd ..
-cp -a setuptools-75.2.0 buildavx2
+cp -a setuptools-75.3.0 buildavx2
 popd
 
 %build
@@ -74,7 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1729086221
+export SOURCE_DATE_EPOCH=1730205556
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -151,14 +151,14 @@ LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS -march=x86-64-v3 "
 python3 -m installer --destdir=%{buildroot}-v3 dist/*.whl
 popd
 ## Remove excluded files
-rm -f %{buildroot}*/usr/lib/python3.12/site-packages/setuptools/cli-32.exe
-rm -f %{buildroot}*/usr/lib/python3.12/site-packages/setuptools/cli-64.exe
-rm -f %{buildroot}*/usr/lib/python3.12/site-packages/setuptools/cli-arm64.exe
-rm -f %{buildroot}*/usr/lib/python3.12/site-packages/setuptools/cli.exe
-rm -f %{buildroot}*/usr/lib/python3.12/site-packages/setuptools/gui-32.exe
-rm -f %{buildroot}*/usr/lib/python3.12/site-packages/setuptools/gui-64.exe
-rm -f %{buildroot}*/usr/lib/python3.12/site-packages/setuptools/gui-arm64.exe
-rm -f %{buildroot}*/usr/lib/python3.12/site-packages/setuptools/gui.exe
+rm -f %{buildroot}*/usr/lib/python3.13/site-packages/setuptools/cli-32.exe
+rm -f %{buildroot}*/usr/lib/python3.13/site-packages/setuptools/cli-64.exe
+rm -f %{buildroot}*/usr/lib/python3.13/site-packages/setuptools/cli-arm64.exe
+rm -f %{buildroot}*/usr/lib/python3.13/site-packages/setuptools/cli.exe
+rm -f %{buildroot}*/usr/lib/python3.13/site-packages/setuptools/gui-32.exe
+rm -f %{buildroot}*/usr/lib/python3.13/site-packages/setuptools/gui-64.exe
+rm -f %{buildroot}*/usr/lib/python3.13/site-packages/setuptools/gui-arm64.exe
+rm -f %{buildroot}*/usr/lib/python3.13/site-packages/setuptools/gui.exe
 ## install_append content
 mkdir -p %{buildroot}/usr/bin
 echo "#!/bin/sh" > %{buildroot}/usr/bin/easy_install_is_deprecated
