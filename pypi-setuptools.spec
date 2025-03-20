@@ -6,13 +6,13 @@
 # autospec commit: fbbd4e3
 #
 Name     : pypi-setuptools
-Version  : 75.8.2
-Release  : 351
-URL      : https://files.pythonhosted.org/packages/d1/53/43d99d7687e8cdef5ab5f9ec5eaf2c0423c2b35133a2b7e7bc276fc32b21/setuptools-75.8.2.tar.gz
-Source0  : https://files.pythonhosted.org/packages/d1/53/43d99d7687e8cdef5ab5f9ec5eaf2c0423c2b35133a2b7e7bc276fc32b21/setuptools-75.8.2.tar.gz
+Version  : 77.0.1
+Release  : 352
+URL      : https://files.pythonhosted.org/packages/ea/df/9f719dc48f64284be8bd99e2e0bb0dd6e9f8e2c2c3c7bf7a685bc5adf2c7/setuptools-77.0.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/ea/df/9f719dc48f64284be8bd99e2e0bb0dd6e9f8e2c2c3c7bf7a685bc5adf2c7/setuptools-77.0.1.tar.gz
 Summary  : Easily download, build, install, upgrade, and uninstall Python packages
 Group    : Development/Tools
-License  : Apache-2.0 BSD-2-Clause BSD-3-Clause MIT Python-2.0 ZPL-2.0
+License  : Apache-2.0 BSD-2-Clause MIT Python-2.0 ZPL-2.0
 Requires: pypi-setuptools-bin = %{version}-%{release}
 Requires: pypi-setuptools-license = %{version}-%{release}
 Requires: pypi-setuptools-python = %{version}-%{release}
@@ -63,10 +63,10 @@ python3 components for the pypi-setuptools package.
 
 
 %prep
-%setup -q -n setuptools-75.8.2
-cd %{_builddir}/setuptools-75.8.2
+%setup -q -n setuptools-77.0.1
+cd %{_builddir}/setuptools-77.0.1
 pushd ..
-cp -a setuptools-75.8.2 buildavx2
+cp -a setuptools-77.0.1 buildavx2
 popd
 
 %build
@@ -74,7 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1740674379
+export SOURCE_DATE_EPOCH=1742430470
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -135,9 +135,10 @@ cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/platformdirs-4.2.2.dist
 cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/tomli-2.0.1.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/9da6ca26337a886fb3e8d30efd4aeda623dc9ade || :
 cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/typeguard-4.3.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/a51ccdcb7a9d8c2116d1dfc16f11b3c8a5830f67 || :
 cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/typing_extensions-4.12.2.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/c6e195f9aa30cc9b675d1612ca4fb7f74111bd35 || :
-cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/wheel-0.43.0.dist-info/LICENSE.txt %{buildroot}/usr/share/package-licenses/pypi-setuptools/5b39c45a91a556e5f1599604f1799e4027fa0e60 || :
+cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/wheel-0.45.1.dist-info/LICENSE.txt %{buildroot}/usr/share/package-licenses/pypi-setuptools/5b39c45a91a556e5f1599604f1799e4027fa0e60 || :
+cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/wheel/vendored/packaging/LICENSE.APACHE %{buildroot}/usr/share/package-licenses/pypi-setuptools/598f87f072f66e2269dd6919292b2934dbb20492 || :
+cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/wheel/vendored/packaging/LICENSE.BSD %{buildroot}/usr/share/package-licenses/pypi-setuptools/fdc0e4eabc45522b079deff7d03d70528d775dc0 || :
 cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/zipp-3.19.2.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
-cp %{_builddir}/setuptools-%{version}/setuptools/config/_validate_pyproject/NOTICE %{buildroot}/usr/share/package-licenses/pypi-setuptools/3be8c90e01c5b03ec8a6816f1aa47e11894ec399 || :
 python3 -m installer --destdir=%{buildroot} dist/*.whl
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -178,7 +179,6 @@ chmod 755 %{buildroot}/usr/bin/easy_install_is_deprecated
 /usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12
 /usr/share/package-licenses/pypi-setuptools/0d43a836dac65c0ea426ad49c881a1086600bf85
 /usr/share/package-licenses/pypi-setuptools/2b8b815229aa8a61e483fb4ba0588b8b6c491890
-/usr/share/package-licenses/pypi-setuptools/3be8c90e01c5b03ec8a6816f1aa47e11894ec399
 /usr/share/package-licenses/pypi-setuptools/598f87f072f66e2269dd6919292b2934dbb20492
 /usr/share/package-licenses/pypi-setuptools/5b39c45a91a556e5f1599604f1799e4027fa0e60
 /usr/share/package-licenses/pypi-setuptools/9da6ca26337a886fb3e8d30efd4aeda623dc9ade
