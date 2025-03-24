@@ -6,10 +6,10 @@
 # autospec commit: fbbd4e3
 #
 Name     : pypi-setuptools
-Version  : 77.0.3
-Release  : 353
-URL      : https://files.pythonhosted.org/packages/81/ed/7101d53811fd359333583330ff976e5177c5e871ca8b909d1d6c30553aa3/setuptools-77.0.3.tar.gz
-Source0  : https://files.pythonhosted.org/packages/81/ed/7101d53811fd359333583330ff976e5177c5e871ca8b909d1d6c30553aa3/setuptools-77.0.3.tar.gz
+Version  : 78.0.1
+Release  : 354
+URL      : https://files.pythonhosted.org/packages/47/42/55a8f24bd1287676b23e56a6d94e416be390ca6e0ee30fa46a782d038f80/setuptools-78.0.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/47/42/55a8f24bd1287676b23e56a6d94e416be390ca6e0ee30fa46a782d038f80/setuptools-78.0.1.tar.gz
 Summary  : Easily download, build, install, upgrade, and uninstall Python packages
 Group    : Development/Tools
 License  : Apache-2.0 BSD-2-Clause BSD-3-Clause MIT Python-2.0 ZPL-2.0
@@ -63,10 +63,10 @@ python3 components for the pypi-setuptools package.
 
 
 %prep
-%setup -q -n setuptools-77.0.3
-cd %{_builddir}/setuptools-77.0.3
+%setup -q -n setuptools-78.0.1
+cd %{_builddir}/setuptools-78.0.1
 pushd ..
-cp -a setuptools-77.0.3 buildavx2
+cp -a setuptools-78.0.1 buildavx2
 popd
 
 %build
@@ -74,7 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1742494564
+export SOURCE_DATE_EPOCH=1742839492
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
