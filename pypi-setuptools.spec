@@ -6,10 +6,10 @@
 # autospec commit: 9594167
 #
 Name     : pypi-setuptools
-Version  : 80.1.0
-Release  : 361
-URL      : https://files.pythonhosted.org/packages/aa/b2/bd26ed086b842b68c8fe9aac380ad7e5118cf84fa7abd45bb059a88368a8/setuptools-80.1.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/aa/b2/bd26ed086b842b68c8fe9aac380ad7e5118cf84fa7abd45bb059a88368a8/setuptools-80.1.0.tar.gz
+Version  : 80.3.1
+Release  : 362
+URL      : https://files.pythonhosted.org/packages/70/dc/3976b322de9d2e87ed0007cf04cc7553969b6c7b3f48a565d0333748fbcd/setuptools-80.3.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/70/dc/3976b322de9d2e87ed0007cf04cc7553969b6c7b3f48a565d0333748fbcd/setuptools-80.3.1.tar.gz
 Summary  : Easily download, build, install, upgrade, and uninstall Python packages
 Group    : Development/Tools
 License  : Apache-2.0 BSD-2-Clause BSD-3-Clause MIT Python-2.0 ZPL-2.0
@@ -63,10 +63,10 @@ python3 components for the pypi-setuptools package.
 
 
 %prep
-%setup -q -n setuptools-80.1.0
-cd %{_builddir}/setuptools-80.1.0
+%setup -q -n setuptools-80.3.1
+cd %{_builddir}/setuptools-80.3.1
 pushd ..
-cp -a setuptools-80.1.0 buildavx2
+cp -a setuptools-80.3.1 buildavx2
 popd
 
 %build
@@ -74,7 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1746042840
+export SOURCE_DATE_EPOCH=1746455770
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -120,7 +120,6 @@ LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-setuptools
-cp %{_builddir}/setuptools-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
 cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/backports.tarfile-1.2.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
 cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/importlib_metadata-8.0.0.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/2b8b815229aa8a61e483fb4ba0588b8b6c491890 || :
 cp %{_builddir}/setuptools-%{version}/setuptools/_vendor/inflect-7.3.1.dist-info/LICENSE %{buildroot}/usr/share/package-licenses/pypi-setuptools/0445ed0f69910eeaee036f09a39a13c6e1f37e12 || :
