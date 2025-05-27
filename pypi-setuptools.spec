@@ -6,10 +6,10 @@
 # autospec commit: 99a7985
 #
 Name     : pypi-setuptools
-Version  : 80.8.0
-Release  : 364
-URL      : https://files.pythonhosted.org/packages/8d/d2/ec1acaaff45caed5c2dedb33b67055ba9d4e96b091094df90762e60135fe/setuptools-80.8.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/8d/d2/ec1acaaff45caed5c2dedb33b67055ba9d4e96b091094df90762e60135fe/setuptools-80.8.0.tar.gz
+Version  : 80.9.0
+Release  : 365
+URL      : https://files.pythonhosted.org/packages/18/5d/3bf57dcd21979b887f014ea83c24ae194cfcd12b9e0fda66b957c69d1fca/setuptools-80.9.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/18/5d/3bf57dcd21979b887f014ea83c24ae194cfcd12b9e0fda66b957c69d1fca/setuptools-80.9.0.tar.gz
 Summary  : Easily download, build, install, upgrade, and uninstall Python packages
 Group    : Development/Tools
 License  : Apache-2.0 BSD-2-Clause BSD-3-Clause MIT Python-2.0 ZPL-2.0
@@ -63,10 +63,10 @@ python3 components for the pypi-setuptools package.
 
 
 %prep
-%setup -q -n setuptools-80.8.0
-cd %{_builddir}/setuptools-80.8.0
+%setup -q -n setuptools-80.9.0
+cd %{_builddir}/setuptools-80.9.0
 pushd ..
-cp -a setuptools-80.8.0 buildavx2
+cp -a setuptools-80.9.0 buildavx2
 popd
 
 %build
@@ -74,7 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1747762141
+export SOURCE_DATE_EPOCH=1748354855
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -157,10 +157,6 @@ rm -f %{buildroot}*/usr/lib/python3.13/site-packages/setuptools/cli-32.exe
 rm -f %{buildroot}*/usr/lib/python3.13/site-packages/setuptools/cli-64.exe
 rm -f %{buildroot}*/usr/lib/python3.13/site-packages/setuptools/cli-arm64.exe
 rm -f %{buildroot}*/usr/lib/python3.13/site-packages/setuptools/cli.exe
-rm -f %{buildroot}*/usr/lib/python3.13/site-packages/setuptools/gui-32.exe
-rm -f %{buildroot}*/usr/lib/python3.13/site-packages/setuptools/gui-64.exe
-rm -f %{buildroot}*/usr/lib/python3.13/site-packages/setuptools/gui-arm64.exe
-rm -f %{buildroot}*/usr/lib/python3.13/site-packages/setuptools/gui.exe
 ## install_append content
 mkdir -p %{buildroot}/usr/bin
 echo "#!/bin/sh" > %{buildroot}/usr/bin/easy_install_is_deprecated
